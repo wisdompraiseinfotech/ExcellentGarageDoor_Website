@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excellent Garage Door</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
+}
+
+body{
+background:#FFFFFF;
+color:#12AAEE;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:linear-gradient(90deg,#0B7DB3,#07142f);
+background-color: #12AAEE;
+padding:16px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo img{
+height:70px;
+background:white;
+padding:5px;
+border-radius:8px;
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#EB5C22;
+}
+
+.call-btn{
+/* background:linear-gradient(135deg,#EB5C22,#12AAEE); */
+background-color: #12AAEE;
+padding:12px 20px;
+border-radius:12px;
+color:white;
+}
+
+.hamburger{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* SESSION */
+
+.session{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-size:14px;
+}
+
+.session-box{
+background:rgba(255,255,255,0.08);
+padding:8px 14px;
+border-radius:10px;
+color:white;
+font-weight:bold;
+}
+
+/* PROFILE */
+
+.profile{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+}
+
+.profile-icon{
+width:38px;
+height:38px;
+border-radius:50%;
+/* background:linear-gradient(135deg,#EB5C22,#12AAEE); */
+background-color: #EB5C22;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:bold;
+color:white;
+}
+
+
+
+/* HERO */
+
+.hero{
+padding:80px 5%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero h1 span{
+color:#EB5C22;
+}
+
+.hero p{
+margin:20px 0;
+font-size:18px;
+}
+
+.primary-btn{
+background:#12AAEE;
+color:#FFFFFF;
+padding:14px 24px;
+text-decoration:none;
+border-radius:10px;
+margin-right:10px;
+}
+
+.secondary-btn{
+background:#EB5C22;
+color:#FFFFFF;
+padding:14px 24px;
+text-decoration:none;
+border-radius:10px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+background:#FFFFFF;
+border:2px solid #12AAEE;
+padding:30px;
+border-radius:20px;
+}
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.dashboard-card{
+background:#12AAEE;
+color:#FFFFFF;
+padding:20px;
+border-radius:14px;
+text-align:center;
+}
+
+/* CATALOG */
+
+.catalog{
+padding:60px 5%;
+}
+
+.filters{
+display:grid;
+grid-template-columns:1fr 2fr 150px;
+gap:20px;
+margin-bottom:40px;
+}
+
+.filter-box{
+border:2px solid #12AAEE;
+padding:15px;
+border-radius:12px;
+}
+
+.filter-box input,
+.filter-box select{
+width:100%;
+border:none;
+outline:none;
+margin-top:8px;
+}
+
+.apply-btn{
+background:#EB5C22;
+color:#FFFFFF;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:600;
+}
+
+/* PRODUCTS */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.product-card{
+border:2px solid #12AAEE;
+padding:20px;
+border-radius:20px;
+background:#FFFFFF;
+}
+
+.product-card:hover{
+border-color:#EB5C22;
+}
+
+.product-tag{
+background:#12AAEE;
+color:#FFFFFF;
+padding:8px 14px;
+border-radius:20px;
+display:inline-block;
+margin-bottom:15px;
+}
+
+.product-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.view-btn{
+background:#EB5C22;
+color:#FFFFFF;
+border:none;
+padding:10px 18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+background:linear-gradient(90deg,#12AAEE,#EB5C22);
+padding:25px;
+text-align:center;
+color:#FFFFFF;
+margin-top:60px;
+}
+
+/* FOOTER */
+
+.footer{
+background:linear-gradient(90deg,#0B7DB3,#07142f);
+padding:30px 5%;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.footer-logo{
+width:46px;
+height:46px;
+border-radius:12px;
+background:linear-gradient(135deg,#EB5C22,#12AAEE);
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:bold;
+}
+
+.footer-links{
+display:flex;
+gap:20px;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+color:#EB5C22;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#12AAEE;
+flex-direction:column;
+padding:20px;
+gap:18px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu a{
+width:100%;
+text-align:center;
+padding:14px;
+background:none;
+}
+
+.hamburger{
+display:block;
+}
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.product-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.filters{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:768px){
+.product-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.footer{
+flex-direction:column;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="images/logo1.svg" alt="Logo">
+</div>
+
+<div class="hamburger" id="hamburger">☰</div>
+
+<div class="menu" id="menu">
+
+<a href="index.html"><b>Home</b></a>
+<a href="Products.html"><b>Products</b></a>
+<a href="Find a Dealer.html"><b>Find Dealer</b></a>
+<a href="#" class="call-btn"><b>Call Now</b></a>
+
+<div class="session">
+<span><b>Session:</b></span>
+<div class="session-box" id="sessionTimer"><b>25:00</b></div>
+</div>
+
+<div class="profile">
+<div class="profile-icon">A</div>
+<span><b>admin@excellentgd.com</b></span>
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+<div>
+<h1>Smart & Modern <span>Garage Door</span> Experience</h1>
+<p>Manage premium garage door products with modern design.</p>
+<a href="#" class="primary-btn">Explore</a>
+<a href="#" class="secondary-btn">Support</a>
+</div>
+
+<div class="dashboard">
+<h2>Dealer Dashboard</h2>
+<div class="dashboard-grid">
+<div class="dashboard-card"><h1>320+</h1><p>Products</p></div>
+<div class="dashboard-card"><h1>150+</h1><p>Dealers</p></div>
+<div class="dashboard-card"><h1>98%</h1><p>Satisfaction</p></div>
+<div class="dashboard-card"><h1>24/7</h1><p>Support</p></div>
+</div>
+</div>
+</section>
+
+<section class="catalog">
+
+<div class="filters">
+<div class="filter-box">
+<label>Category</label>
+<select>
+<option>All Categories</option>
+<option>Residential</option>
+<option>Commercial</option>
+</select>
+</div>
+
+<div class="filter-box">
+<label>Search Products</label>
+<input type="text" placeholder="Search products...">
+</div>
+
+<button class="apply-btn">Apply</button>
+</div>
+
+<div class="product-grid">
+
+<div class="product-card">
+<div class="product-tag">Residential</div>
+<h3>Classic Steel Door</h3>
+<p>Premium smart garage door solution.</p>
+<div class="product-footer">
+<h4>₹25,000</h4>
+<button class="view-btn">View</button>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-tag">Smart Door</div>
+<h3>Premium Smart Door</h3>
+<p>Mobile app control access.</p>
+<div class="product-footer">
+<h4>₹45,000</h4>
+<button class="view-btn">View</button>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-tag">Commercial</div>
+<h3>Industrial Roller</h3>
+<p>Heavy duty rolling system.</p>
+<div class="product-footer">
+<h4>₹60,000</h4>
+<button class="view-btn">View</button>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-tag">Luxury</div>
+<h3>Modern Glass Door</h3>
+<p>Elegant premium design.</p>
+<div class="product-footer">
+<h4>₹75,000</h4>
+<button class="view-btn">View</button>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-tag">Automation</div>
+<h3>Sliding Door</h3>
+<p>Silent smart automation.</p>
+<div class="product-footer">
+<h4>₹38,000</h4>
+<button class="view-btn">View</button>
+</div>
+</div>
+
+<div class="product-card">
+<div class="product-tag">Security</div>
+<h3>Heavy Security Door</h3>
+<p>Maximum steel protection.</p>
+<div class="product-footer">
+<h4>₹55,000</h4>
+<button class="view-btn">View</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-logo"><img src="images/logo1.jpg" alt="" height="50px" width="200px"></div>
+
+<div class="footer-links">
+<a href="#"><b>Products</b></a>
+<a href="#"><b>Dealers</b></a>
+<a href="#"><b>Support</b></a>
+</div>
+
+<p><b>© 2026 Excellent Garage Door</b></p>
+
+</footer> 
+
+<script>
+const hamburger=document.getElementById("hamburger");
+const menu=document.getElementById("menu");
+
+hamburger.addEventListener("click",()=>{
+menu.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

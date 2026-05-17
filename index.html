@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excellent Garage Door</title>
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="images/logo1.svg" alt="Logo">
+</div>
+
+<div class="hamburger" id="hamburger">☰</div>
+
+<div class="menu" id="menu">
+
+<a href="index.html"><b>Home</b></a>
+<a href="Products.html"><b>Products</b></a>
+<a href="Find a Dealer.html"><b>Find Dealer</b></a>
+<a href="#" class="call-btn"><b>Call Now</b></a>
+
+<div class="session">
+<span><b>Session:</b></span>
+<div class="session-box" id="sessionTimer"><b>25:00</b></div>
+</div>
+
+<div class="profile">
+<div class="profile-icon">A</div>
+<span><b>admin@excellentgd.com</b></span>
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="overlay">
+
+<h1>Premium Garage Door Solutions</h1>
+
+<p>
+Professional installation, repair and smart automation services trusted by thousands.
+</p>
+
+<div class="hero-buttons">
+<button class="primary-btn">Book Service</button>
+<button class="secondary-btn">Explore Products</button>
+</div>
+
+</div>
+</section>
+
+<!-- DASHBOARD -->
+
+<section class="dashboard">
+
+<div class="sidebar">
+<h2>Admin Panel</h2>
+
+<div class="menu-item active">Dealer Approvals</div>
+<div class="menu-item">Products</div>
+<div class="menu-item">Orders</div>
+<div class="menu-item">Locations</div>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Dealer Approvals</h3>
+<p>Review dealer applications quickly.</p>
+<button>Review</button>
+</div>
+
+<div class="card">
+<h3>Products</h3>
+<p>Manage product catalog and pricing.</p>
+<button>Manage</button>
+</div>
+
+<div class="card">
+<h3>Orders</h3>
+<p>Track shipments and order statuses.</p>
+<button>Track</button>
+</div>
+
+<div class="card">
+<h3>Locations</h3>
+<p>Manage service center locations.</p>
+<button>Manage</button>
+</div>
+
+<div class="card">
+<h3>Locations</h3>
+<p>Manage service center locations.</p>
+<button>Manage</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-logo"><img src="images/logo1.jpg" alt="" height="50px" width="200px"></div>
+
+<div class="footer-links">
+<a href="#"><b>Products</b></a>
+<a href="#"><b>Dealers</b></a>
+<a href="#"><b>Support</b></a>
+</div>
+
+<p><b>© 2026 Excellent Garage Door</b></p>
+
+</footer>
+
+<script>
+
+const hamburger=document.getElementById("hamburger");
+const menu=document.getElementById("menu");
+
+hamburger.addEventListener("click",()=>{
+menu.classList.toggle("active");
+});
+
+/* SESSION TIMER */
+
+let minutes=25;
+let seconds=0;
+
+const sessionTimer=document.getElementById("sessionTimer");
+
+function updateTimer(){
+
+if(seconds===0){
+
+if(minutes===0){
+sessionTimer.innerHTML="Expired";
+return;
+}
+
+minutes--;
+seconds=59;
+
+}else{
+seconds--;
+}
+
+let min=minutes<10?"0"+minutes:minutes;
+let sec=seconds<10?"0"+seconds:seconds;
+
+sessionTimer.innerHTML=min+":"+sec;
+}
+
+setInterval(updateTimer,1000);
+
+</script>
+
+</body>
+</html>
