@@ -6,6 +6,9 @@
 <title>Find Dealer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 *{
@@ -20,6 +23,136 @@ background:#FFFFFF;
 color:#12AAEE;
 overflow-x:hidden;
 }
+
+
+
+
+  body{
+      background:#f5f5f5;
+    }
+
+    /* TOP HEADER */
+    .top-header{
+      width:100%;
+      background:#27a9e1;
+      padding:12px 20px;
+    }
+
+    .header-container{
+      max-width:1400px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    /* LEFT SIDE */
+    .left-section{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .email{
+      color:#fff;
+      font-size:16px;
+      font-weight:600;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:18px;
+    }
+
+    .social-icons a{
+      color:#fff;
+      text-decoration:none;
+      font-size:24px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      transform:scale(1.1);
+      opacity:0.8;
+    }
+
+    /* RIGHT SIDE */
+    .right-section{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      background:#f26a21;
+      color:#fff;
+      text-decoration:none;
+      padding:12px 22px;
+      font-size:16px;
+      font-weight:bold;
+      border-radius:2px;
+      transition:0.3s;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      background:#d95c1d;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:768px){
+
+      .header-container{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+      }
+
+      .left-section{
+        flex-direction:column;
+        gap:12px;
+      }
+
+      .social-icons{
+        justify-content:center;
+      }
+
+      .right-section{
+        justify-content:center;
+      }
+
+      .btn{
+        padding:10px 16px;
+        font-size:14px;
+      }
+
+      .email{
+        font-size:14px;
+      }
+    }
+
+    @media (max-width:480px){
+
+      .right-section{
+        width:100%;
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+        text-align:center;
+      }
+
+      .social-icons a{
+        font-size:20px;
+      }
+    }
+
+    
 
 /* NAVBAR */
 
@@ -286,6 +419,43 @@ text-align:center;
 </head>
 
 <body>
+
+    <!-- Top Header -->
+
+  <div class="top-header">
+
+    <div class="header-container">
+
+      <!-- LEFT -->
+      <div class="left-section">
+
+        <div class="email">
+          excellentgaragedoor@gmail.com
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right-section">
+
+        <a href="#" class="btn">Create Account</a>
+
+        <a href="#" class="btn">Sign In</a>
+
+        <a href="#" class="btn">Franchise Opportunities</a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 <!-- NAVBAR -->
 
